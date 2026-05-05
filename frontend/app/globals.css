@@ -1,0 +1,55 @@
+ @import "tailwindcss";
+
+:root {
+  --background: #fff1f6;   /* soft blush */
+  --foreground: #3b2f35;   /* muted cocoa */
+  --accent: #f4a7c5;       /* baby pink */
+  --accent-soft: #fbd5e5;  /* cotton candy */
+  --secondary: #e9d5ff;    /* lavender mist */
+  --card: #ffffffcc;       /* glassy white */
+  --border: #f2cfe0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Poppins", "DM Sans", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1f1724;
+    --foreground: #f7e9f2;
+    --accent: #f9a8d4;
+    --accent-soft: #3a2533;
+    --secondary: #c4b5fd;
+    --card: #2a1f2fcc;
+    --border: #4a2f42;
+  }
+}
+
+body {
+  background: radial-gradient(circle at top, #ffe4ec 0%, var(--background) 60%);
+  color: var(--foreground);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ✨ soft scroll + polish */
+* {
+  scroll-behavior: smooth;
+}
+
+/* ✨ reusable glass card */
+.glass-card {
+  background: var(--card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+/* ✨ cute gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #f9a8d4, #c4b5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
