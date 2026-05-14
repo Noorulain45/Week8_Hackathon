@@ -13,7 +13,7 @@ interface AnalyzeResponse {
 export const pdfApi = createApi({
   reducerPath: 'pdfApi',
   // Backend is on 3000, Frontend on 3001
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000' }), 
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://hackathonbackend-self.vercel.app' }), 
   endpoints: (builder) => ({
     // Keep the object type here so your component can pass { file, message }
     analyzePdf: builder.mutation<AnalyzeResponse, { file: File; message: string }>({
